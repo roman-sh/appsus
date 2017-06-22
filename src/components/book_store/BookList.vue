@@ -1,6 +1,5 @@
 <template>
     <section v-if="books">
-
         <book-filter @set-filter="setFilter"></book-filter>
         <h2>We have {{books.length}} Books</h2>
         <button @click="isCreateMode=true">+</button>
@@ -36,7 +35,7 @@ import BookFilter from './BookFilter';
 import BookPreview from './BookPreview';
 import BookDetails from './BookDetails';
 import BookEdit from './BookEdit';
-import Index from '../Index';
+//import Index from '../Index';
 
 
 export default {

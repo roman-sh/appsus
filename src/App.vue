@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <!--<index></index>-->
+      <main-nav></main-nav>
       <router-view></router-view>
     </div>
 </template>
@@ -9,12 +9,14 @@
     import BookList from './components/book_store/BookList.vue';
     import Cart from './components/book_store/Cart.vue';
     import Index from './components/Index.vue';
+    import MainNav from './components/MainNav.vue';
     export default {
         name: 'app',
         components: {
             BookList,
             Cart,
-            Index
+            Index,
+            MainNav
         }
     }
 </script>
