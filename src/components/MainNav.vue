@@ -1,7 +1,7 @@
 <template>
   <section>
     <el-menu :default-active="'1'" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <router-link to="/"><el-menu-item index="1" class="main>Appsus</el-menu-item></router-link>
+      <router-link to="/"><el-menu-item index="1" class="main">Appsus</el-menu-item></router-link>
       <router-link to="/book-store"><el-menu-item index="2">Book-store</el-menu-item></router-link>
       <el-menu-item index="3">Emails</el-menu-item>
       <router-link to="/maps"><el-menu-item index="4">Maps</el-menu-item></router-link>
