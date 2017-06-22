@@ -26,11 +26,11 @@ export default {
             this.$emit('add-to-cart');
         }
     }
-  
+
 }
 </script>
 
-<<style scoped>
+<style scoped>
     .book-preview {
         list-style: none;
         display: inline-block;

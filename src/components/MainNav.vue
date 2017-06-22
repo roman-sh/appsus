@@ -1,10 +1,10 @@
 <template>
   <section>
     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <router-link to="/"><el-menu-item index="1">Appsus</el-menu-item></router-link>
+      <router-link to="/"><el-menu-item index="1" class="main">Appsus</el-menu-item></router-link>
       <router-link to="/book-store"><el-menu-item index="2">Book-store</el-menu-item></router-link>
-      <el-menu-item index="3">Emails</el-menu-item>
-      <el-menu-item index="4">Maps</el-menu-item>
+      <router-link to="/emails"><el-menu-item index="3">Emails</el-menu-item></router-link>
+      <router-link to="/maps"><el-menu-item index="4">Maps</el-menu-item></router-link>
     </el-menu>
   </section>
 </template>
@@ -25,6 +25,16 @@
     }
   }
 </script>
-
+  el-menu-item {
+}
 <style>
+  el-menu {
+    font-size:16px;
+  }
+
+  .main {
+    font-size: 20px;
+  }
+
+
 </style>
