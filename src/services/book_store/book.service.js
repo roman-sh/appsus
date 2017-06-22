@@ -47,8 +47,9 @@ function getNext(book) {
 }
 
 function saveBook(book) {
-  var idx = books.findIndex(currBook => currBook.id === book.id)
-  books.splice(idx, 1, book);
+  var idx = books.findIndex(currBook => currBook.id === book.id);
+  if (idx === -1) books.push(book);
+  else books.splice(idx, 1, book);
 }
 
 export default {

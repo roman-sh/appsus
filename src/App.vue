@@ -6,14 +6,14 @@
 </template>
 
 <script>
-    import BookList from './components/book_store/BookList.vue';
-    import Cart from './components/book_store/Cart.vue';
+    // import BookList from './components/book_store/BookList.vue';
+    // import Cart from './components/book_store/Cart.vue';
     export default {
         name: 'app',
-        components: {
-            BookList,
-            Cart
-        }
+        // components: {
+        //     BookList,
+        //     Cart
+        // }
     }
 </script>
 
