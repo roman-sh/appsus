@@ -36,6 +36,8 @@ import BookFilter from './BookFilter';
 import BookPreview from './BookPreview';
 import BookDetails from './BookDetails';
 import BookEdit from './BookEdit';
+import Index from '../Index';
+
 
 export default {
     name: 'book-list',
