@@ -4,6 +4,7 @@ import Index from '@/components/Index.vue';
 import BookList from '@/components/book_store/BookList.vue';
 import Cart from '@/components/book_store/Cart.vue';
 import MainMaps from '@/components/maps/MainMaps.vue';
+import EmailApp from '@/components/email/EmailApp.vue';
 
 
 Vue.use(Router);
@@ -24,6 +25,11 @@ export default new Router({
       path: '/book-store/cart',
       name: 'cart',
       component: Cart
+    },
+    {
+      path: '/emails',
+      name: 'emails-app',
+      component: EmailApp
     },
     {
       path: '/maps',

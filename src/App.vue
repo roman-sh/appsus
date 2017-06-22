@@ -10,13 +10,16 @@
   import Cart from './components/book_store/Cart.vue';
   import Index from './components/Index.vue';
   import MainNav from './components/MainNav.vue';
+  import EmailApp from './components/email/EmailApp.vue';
+
   export default {
     name: 'app',
     components: {
       BookList,
       Cart,
       Index,
-      MainNav
+      MainNav,
+      EmailApp
     }
   }
 </script>
