@@ -1,5 +1,5 @@
 <template>
-  <el-table-column>
+  <el-table-column @click="row-click">
     <!--prop="date"-->
     <!--label="Date"-->
     <!--width="180">-->
@@ -24,7 +24,9 @@
       }
     },
     methods: {
-
+      row-click: function (e) {
+        console.log(e.target);
+      }
     }
   }
 </script>

@@ -31,8 +31,9 @@
   }
 
   #app {
-    padding: 0;
-    margin: 0;
+
+    width: 100%;
+    margin: 0 auto;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     text-align: center;
     color: #2c3e50;

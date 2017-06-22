@@ -39,7 +39,7 @@ function generateEmail(title, i) {
   return {
     id: i + 1,
     title: `${title}`,
-    description: `${title} lorem  ipsum dkhd daklhd dakhdk dakhdk da`,
+    desc: `${title} lorem  ipsum dkhd daklhd dakhdk dakhdk da`,
     author: `Author ${i}`
   }
 }

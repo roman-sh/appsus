@@ -1,24 +1,29 @@
 <template>
   <!--<section v-if="emails">-->
-    <section>
+    <section class="">
     <!--<email-filter @set-filter="setFilter"></email-filter>-->
-    <h2>We have {{emails.length}} Emails</h2>
-      <el-table
-        :data="emails"
-        style="width: 100%">
+    <!--<h2>We have {{emails.length}} Emails</h2>-->
+      <el-table :data="emails" height="200" style="width: 40%">
+
         <el-table-column
+
+          sortable
+          header-align = "center"
+          prop="id"
+          label="ID"
+          >
+        </el-table-column>
+        <el-table-column
+          header-align = "center"
           prop="title"
           label="Title"
-          width="180">
+          >
         </el-table-column>
         <el-table-column
+          header-align = "center"
           prop="author"
-          label="Name"
-          width="180">
-        </el-table-column>
-        <el-table-column
-          prop="address"
-          label="Address">
+          label="Author"
+          >
         </el-table-column>
       </el-table>
 
@@ -53,4 +58,10 @@
     }
   }
 </script>
+
+<style>
+  el-table-column {
+    text-align: center;
+  }
+</style>
 

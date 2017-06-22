@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="search-input">
     <el-input
       placeholder="Input"
       icon="search"
@@ -17,6 +17,7 @@
 
   export default {
     name: 'email-filter',
+    props: ['emails'],
     created() {
 
     },
@@ -33,5 +34,9 @@
   }
 </script>
 
-<style></style>
+<style>
+  .search-input {
+    width: 40%;
+  }
+</style>
 

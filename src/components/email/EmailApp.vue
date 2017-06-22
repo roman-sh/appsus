@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <email-filter></email-filter>
     <email-list></email-list>
   </div>
@@ -30,4 +30,14 @@
     methods: {}
   }
 </script>
+
+<style>
+  .app {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #BFCBD9;
+    border-radius: 3px;
+  }
+</style>
 

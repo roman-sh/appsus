@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="navigation">
     <el-menu :default-active="'1'" class="el-menu-demo" mode="horizontal" @select="handleSelect">
       <router-link to="/"><el-menu-item index="1" class="main">Appsus</el-menu-item></router-link>
       <router-link to="/book-store"><el-menu-item index="2">Book-store</el-menu-item></router-link>
@@ -28,6 +28,9 @@
   el-menu-item {
 }
 <style>
+  .navigation {
+    margin-bottom: 40px;
+  }
   el-menu {
     font-size:16px;
   }
