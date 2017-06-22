@@ -1,13 +1,13 @@
-<<template>
+<template>
     <section v-if="books">
-           
+
         <book-filter @set-filter="setFilter"></book-filter>
         <h2>We have {{books.length}} Books</h2>
         <button @click="isCreateMode=true">+</button>
         <ul>
-            <book-preview v-for="currBook in booksToShow" 
+            <book-preview v-for="currBook in booksToShow"
                 :key="currBook.id"
-                @click.native="selectBook(currBook)" 
+                @click.native="selectBook(currBook)"
                 @edit="editBook(currBook)"
                 @delete="deleteBook(currBook)"
                 @add-to-cart="addToCart(currBook)"
@@ -29,9 +29,9 @@
         </section>
 </template>
 
-<<script>
-import bookService from '../services/book.service.js';
-import cartService from '../services/cart.service.js';
+<script>
+import bookService from '../../services/book_store/book.service.js';
+import cartService from '../../services/book_store/cart.service.js';
 import BookFilter from './BookFilter';
 import BookPreview from './BookPreview';
 import BookDetails from './BookDetails';

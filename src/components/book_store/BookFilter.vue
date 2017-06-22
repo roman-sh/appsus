@@ -1,11 +1,11 @@
-<<template>
+<template>
     <section class="book-filter">
         <h2>Books Filter</h2>
         <input type="text" v-model="bookFilter.byText" placeholder="Filter By Name" >
     </section>
 </template>
 
-<<script>
+<script>
 export default {
     name: 'book-filter',
     data() {
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<<style scoped>
+<style scoped>
     .book-filter {
         background-color: chocolate;
         padding: 10px;

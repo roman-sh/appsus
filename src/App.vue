@@ -2,14 +2,12 @@
     <div id="app">
         <img src="./assets/logo.png">
         <router-view></router-view>
-        <!--<cart></cart>-->
-        <!--<book-list></book-list>-->
     </div>
 </template>
 
 <script>
-    import BookList from './components/BookList';
-    import Cart from './components/Cart';
+    import BookList from './components/book_store/BookList.vue';
+    import Cart from './components/book_store/Cart.vue';
     export default {
         name: 'app',
         components: {

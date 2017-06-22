@@ -13,7 +13,7 @@
 
 
 <script>
-import cartService from '../services/cart.service.js'
+import cartService from '../../services/book_store/cart.service.js'
 export default {
     name: 'cart',
     data() {
@@ -24,8 +24,8 @@ export default {
     computed: {
         total() {
            this.items;
-           return cartService.getCartTotal(); 
-        }               
+           return cartService.getCartTotal();
+        }
     }
 }
 </script>

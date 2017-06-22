@@ -1,4 +1,4 @@
-<<template>
+<template>
     <section class="popup book-details">
         <button @click="closeMe">x</button>
         <h1>Details of: {{book.title}}</h1>
@@ -9,7 +9,7 @@
     </section>
 </template>
 
-<<script>
+<script>
 export default {
     name: 'book-details',
     props: ['book'],
@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<<style>
+<style>
     .popup {
         background: gold;
         padding: 10px;

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import BookList from '@/components/BookList';
-import Cart from '@/components/Cart';
+import BookList from '@/components/book_store/BookList.vue';
+import Cart from '@/components/book_store/Cart.vue';
 
 
 Vue.use(Router);

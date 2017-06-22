@@ -1,4 +1,4 @@
-<<template>
+<template>
     <section class="popup book-edit">
 
         <h1 v-if="book">Edit: {{book.title}}</h1>
@@ -10,7 +10,7 @@
     </section>
 </template>
 
-<<script>
+<script>
 export default {
     name: 'book-edit',
     props: ['book'],
@@ -19,7 +19,7 @@ export default {
             bookToEdit: null
         }
     },
-    
+
     created(){
         this.bookToEdit = Object.assign({}, this.book)
     },
@@ -31,13 +31,13 @@ export default {
         cancel() {
             console.log('Cancel');
             this.$emit('cancel');
-            
+
         }
     }
 }
 </script>
 
-<<style scoped>
+<style scoped>
     .book-edit {
         background: lightgoldenrodyellow;
     }
