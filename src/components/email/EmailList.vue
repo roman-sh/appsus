@@ -1,43 +1,22 @@
 <template>
   <!--<section v-if="emails">-->
-    <section class="">
-    <!--<email-filter @set-filter="setFilter"></email-filter>-->
-    <!--<h2>We have {{emails.length}} Emails</h2>-->
-      <el-table :data="emails" height="200" style="width: 40%">
+  <section class="email-list">
+    <email-filter></email-filter>
 
-        <el-table-column
+    <table>
+      <email-preview v-for="email in emails" :key="email.id" :email="email"></email-preview>
+    </table>
 
-          sortable
-          header-align = "center"
-          prop="id"
-          label="ID"
-          >
-        </el-table-column>
-        <el-table-column
-          header-align = "center"
-          prop="title"
-          label="Title"
-          >
-        </el-table-column>
-        <el-table-column
-          header-align = "center"
-          prop="author"
-          label="Author"
-          >
-        </el-table-column>
-      </el-table>
+    <!--<el-table-->
+      <!--ref="multipleTable"-->
+      <!--:data="emails"-->
+      <!--border-->
+      <!--style="width: 100%"-->
+    <!--&gt;-->
 
-    <!--<book-details v-if="selectedBook"-->
-                  <!--@close="resetSelected"-->
-                  <!--@next="selectNext"-->
-                  <!--:book="selectedBook">-->
-    <!--</book-details>-->
+      <!--<email-preview @row-click="click"></email-preview>-->
 
-    <!--<book-edit v-if="editedBook || isCreateMode"-->
-               <!--:book="editedBook"-->
-               <!--@save="saveBook"-->
-               <!--@cancel="closeOnCancel">-->
-    <!--</book-edit>-->
+    <!--</el-table>-->
 
   </section>
 </template>
@@ -45,23 +24,40 @@
 <script>
   import emailService from '../../services/emails/email.service'
   import EmailPreview from '../email/EmailPreview.vue'
+  import EmailFilter from '../email/EmailFilter.vue'
 
   export default {
     name: 'email-list',
     components: {
-      EmailPreview
+      EmailPreview,
+      EmailFilter
     },
     data() {
       return {
         emails: emailService.getEmails()
       }
+    },
+    methods: {
+
     }
   }
 </script>
 
 <style>
-  el-table-column {
+
+  email-list {
+    width: 40%;
+  }
+  .el-table {
+    border-radius: 4px;
+  }
+
+  .el-table-column {
     text-align: center;
+  }
+
+  table {
+    width: 40%;
   }
 </style>
 

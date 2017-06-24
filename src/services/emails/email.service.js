@@ -1,24 +1,6 @@
 let emails = [];
 
 function getEmails() {
-  // return new Promise(resolve => {
-  //   // simple caching mechanism
-  //   if (emails.length) {
-  //     resolve(emails);
-  //   }
-  //   else {
-  //     setTimeout(() => {
-  //       return emails = generateEmails();
-  //
-  //       // emails = emails.map(email => {
-  //       //   email.quantity = 0;
-  //       //   return e;
-  //       // })
-  //
-  //       //resolve(books);
-  //     }, 500);
-  //   }
-  // });
   return generateEmails()
 }
 
@@ -30,16 +12,17 @@ export default {
 // Used to create local data with no AJAX
 
 function generateEmails() {
-  const titles = ['Title1', 'Title2', 'Title3', 'Title4', 'Title5', 'Title6'];
+  const subject = ['subject1', 'subject2', 'subject3', 'subject4', 'subject5', 'subject6'];
 
-  return titles.map(generateEmail);
+  return subject.map(generateEmail);
 }
 
-function generateEmail(title, i) {
+function generateEmail(subject, i) {
   return {
     id: i + 1,
-    title: `${title}`,
-    desc: `${title} lorem  ipsum dkhd daklhd dakhdk dakhdk da`,
-    author: `Author ${i}`
+    from: `Author ${i}`,
+    subject: `${subject}`,
+    body: `${subject} lorem  ipsum dkhd daklhd dakhdk dakhdk da`,
+    date: 1231231231
   }
 }

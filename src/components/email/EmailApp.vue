@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <email-filter></email-filter>
     <email-list></email-list>
+    <email-details></email-details>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
   import EmailFilter from './EmailFilter'
   import EmailList from './EmailList'
   import EmailPreview from './EmailPreview'
+  import EmailDetails from './EmailDetails'
 
   export default {
     name: 'email-app',
@@ -17,7 +18,8 @@
       emailService,
       EmailFilter,
       EmailList,
-      EmailPreview
+      EmailPreview,
+      EmailDetails
     },
     created() {
 //      this.emails = emailService.getEmails()
