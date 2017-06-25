@@ -7,6 +7,9 @@ import MainMaps from 'vue-yandex-maps';
 
 export const eventBus = new Vue({
   methods: {
+    selectEmail(email) {
+      this.$emit('selectEmail', email)
+    },
     emailWasClicked(email) {
       this.$emit('emailWasClicked', email)
     },

@@ -6,6 +6,7 @@
     </div>
 </template>
 
+
 <script>
   import BookList from './components/book_store/BookList.vue';
   import Cart from './components/book_store/Cart.vue';
