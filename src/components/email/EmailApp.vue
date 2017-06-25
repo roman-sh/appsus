@@ -11,6 +11,7 @@
   import EmailList from './EmailList'
   import EmailPreview from './EmailPreview'
   import EmailDetails from './EmailDetails'
+  import {eventBus} from '../../main'
 
   export default {
     name: 'email-app',
@@ -24,11 +25,17 @@
     created() {
       emailService.getEmails().then(emails => {
         this.emails = emails
-      })
+      });
+      eventBus.$on('deleteEmail', (email) => {
+          this.emails = this.emails.filter(function (item) {
+            return item !== email
+          })
+      });
     },
     data() {
       return {
-          emails: null
+          emails: null,
+          selectedEmail: null
       }
     },
     methods: {}

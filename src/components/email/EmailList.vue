@@ -35,11 +35,6 @@
         multipleSelection: []
       }
     },
-    created() {
-      eventBus.$on('deleteEmail', (email) => {
-        this.emails.splice(email.id - 1, 1)
-      });
-    },
     methods: {
       toggleSelection(rows) {
         if (rows) {

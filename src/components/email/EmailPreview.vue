@@ -27,7 +27,7 @@
         <el-button
           size="small"
           type="danger"
-          @click.stop="deleteEmail">Delete
+          @click.stop="handleDelete(scope.$index, scope.row)">Delete
         </el-button>
       </template>
     </el-table-column>
@@ -49,11 +49,12 @@
     },
     methods: {
       deleteEmail() {
-        eventBus.deleteEmail(this.email);
-        console.log(this.email)
+        eventBus.deleteEmail($index, row);
+        console.log($index, row);
       },
-      handleDelete(index, row) {
-        console.log(index, row);
+      handleDelete($index, row) {
+          console.log(row);
+        eventBus.deleteEmail(row);
       }
     }
   }
