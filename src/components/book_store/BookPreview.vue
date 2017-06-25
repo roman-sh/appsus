@@ -1,4 +1,4 @@
-<<template>
+<template>
     <li class="book-preview">
         <h2>{{book.title}}</h2>
         <img src="http://via.placeholder.com/250x150">
@@ -9,7 +9,7 @@
     </li>
 </template>
 
-<<script>
+<script>
 export default {
     name: 'book-preview',
     props: ['book'],
@@ -26,11 +26,11 @@ export default {
             this.$emit('add-to-cart');
         }
     }
-
+  
 }
 </script>
 
-<style scoped>
+<<style scoped>
     .book-preview {
         list-style: none;
         display: inline-block;

@@ -1,4 +1,4 @@
-<<template>
+<template>
     <section class="cart">
         <h1>Cart</h1>
         <ul>

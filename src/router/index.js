@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Index from '@/components/Index.vue';
 import BookList from '@/components/book_store/BookList.vue';
 import Cart from '@/components/book_store/Cart.vue';
-import MainMaps from '@/components/maps/MainMaps.vue';
+import MainMaps from '@/components/places/MainMaps.vue';
 
 
 Vue.use(Router);
@@ -26,7 +26,7 @@ export default new Router({
       component: Cart
     },
     {
-      path: '/maps',
+      path: '/places',
       name: 'main-maps',
       component: MainMaps
     }
