@@ -11,6 +11,7 @@
   import Index from './components/Index.vue';
   import MainNav from './components/MainNav.vue';
   import EmailApp from './components/email/EmailApp.vue';
+  import MainMaps from './components/places/MainMaps.vue';
 
   export default {
     name: 'app',
@@ -19,24 +20,10 @@
       Cart,
       Index,
       MainNav,
-      EmailApp
+      EmailApp,
+      MainMaps
     }
   }
-    import BookList from './components/book_store/BookList.vue';
-    import Cart from './components/book_store/Cart.vue';
-    import Index from './components/Index.vue';
-    import MainNav from './components/MainNav.vue';
-    // import MainMaps from './components/places/MainMaps.vue';
-    export default {
-        name: 'app',
-        components: {
-            BookList,
-            Cart,
-            Index,
-            MainNav,
-            // MainMaps
-        }
-    }
 </script>
 
 <style scoped>
