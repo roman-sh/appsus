@@ -9,6 +9,9 @@ export const eventBus = new Vue({
   methods: {
     emailWasClicked(email) {
       this.$emit('emailWasClicked', email)
+    },
+    deleteEmail(email) {
+      this.$emit('deleteEmail', email)
     }
   }
 });

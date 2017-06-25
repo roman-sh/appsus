@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <email-list></email-list>
+    <email-list :emails="emails"></email-list>
     <email-details></email-details>
   </div>
 </template>
@@ -22,11 +22,11 @@
       EmailDetails
     },
     created() {
-//      this.emails = emailService.getEmails()
+      this.emails = emailService.getEmails()
     },
     data() {
       return {
-//          emails: null
+          emails: null
       }
     },
     methods: {}
@@ -35,11 +35,13 @@
 
 <style>
   .app {
+    display: flex;
+    justify-content: space-around;
     width: 80%;
     margin: 0 auto;
     padding: 5px;
     border: 1px solid #BFCBD9;
-    border-radius: 3px;
+    border-radius: 5px;
   }
 </style>
 

@@ -36,7 +36,6 @@
 
 <style>
   .search-input {
-    width: 40%;
     margin-bottom: 5px;
   }
 </style>

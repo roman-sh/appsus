@@ -12,7 +12,9 @@ export default {
 // Used to create local data with no AJAX
 
 function generateEmails() {
-  const subject = ['subject1', 'subject2', 'subject3', 'subject4', 'subject5', 'subject6'];
+  const subject = [
+    'subject1', 'subject2', 'subject3', 'subject4', 'subject5', 'subject6','subject7'
+  ];
 
   return subject.map(generateEmail);
 }
@@ -20,7 +22,7 @@ function generateEmails() {
 function generateEmail(subject, i) {
   return {
     id: i + 1,
-    from: `Author ${i}`,
+    from: `Author ${i+1}`,
     subject: `${subject}`,
     body: `${subject} lorem  ipsum dkhd daklhd dakhdk dakhdk da`,
     date: 1231231231

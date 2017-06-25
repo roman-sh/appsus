@@ -3,20 +3,16 @@
   <section class="email-list">
     <email-filter></email-filter>
 
-    <table>
-      <email-preview v-for="email in emails" :key="email.id" :email="email"></email-preview>
-    </table>
+    <el-table
+      ref="multipleTable"
+      :data="emails"
+      border
+      style="width: 100%"
+      @row-click="emailWasClicked"
+      @selection-change="handleSelectionChange">
 
-    <!--<el-table-->
-      <!--ref="multipleTable"-->
-      <!--:data="emails"-->
-      <!--border-->
-      <!--style="width: 100%"-->
-    <!--&gt;-->
-
-      <!--<email-preview @row-click="click"></email-preview>-->
-
-    <!--</el-table>-->
+      <email-preview></email-preview>
+    </el-table>
 
   </section>
 </template>
@@ -25,29 +21,53 @@
   import emailService from '../../services/emails/email.service'
   import EmailPreview from '../email/EmailPreview.vue'
   import EmailFilter from '../email/EmailFilter.vue'
+  import {eventBus} from '../../main'
 
   export default {
     name: 'email-list',
+    props: ['emails'],
     components: {
       EmailPreview,
       EmailFilter
     },
     data() {
       return {
-        emails: emailService.getEmails()
+        multipleSelection: []
       }
     },
+    created() {
+      eventBus.emailWasClicked(this.emails[0]);
+      eventBus.$on('deleteEmail', (email) => {
+        this.emails.splice(email.id - 1, 1)
+      });
+    },
     methods: {
+      toggleSelection(rows) {
+        if (rows) {
+          rows.forEach(row => {
+            this.$refs.multipleTable.toggleRowSelection(row);
+          });
+        } else {
+          this.$refs.multipleTable.clearSelection();
+        }
+      },
+      handleSelectionChange(val) {
+        this.multipleSelection = val;
+      },
 
+      emailWasClicked(row) {
+        eventBus.emailWasClicked(row)
+      }
     }
   }
 </script>
 
 <style>
 
-  email-list {
-    width: 40%;
+  .email-list {
+    /*width: 40%;*/
   }
+
   .el-table {
     border-radius: 4px;
   }
@@ -56,8 +76,10 @@
     text-align: center;
   }
 
-  table {
-    width: 40%;
+
+
+  .email-unread {
+    font-weight: bold;
   }
 </style>
 
