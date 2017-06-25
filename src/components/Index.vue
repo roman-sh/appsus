@@ -1,5 +1,5 @@
 <template>
-
+  <img src="../assets/horse.jpg">
 </template>
 
 <script>
@@ -10,5 +10,8 @@
   }
 </script>
 
-<style>
+<style scoped>
+  img {
+    width: 100%;
+  }
 </style>

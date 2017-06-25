@@ -1,8 +1,9 @@
 <template>
   <el-table
-    :data="tableData"
+    
+    :data="places"
     border
-    style="width: 70%">
+    style="width: 430px">
     
     <el-table-column
       label="Name"
@@ -35,36 +36,21 @@
 
 <script>
 export default {
-    // name: 'places-list',
-    data() {
-        return {
-            tableData: [{
-                date: '2016-05-03',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles'
-            }, {
-                date: '2016-05-02',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles'
-            }, {
-                date: '2016-05-04',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles'
-            }, {
-                date: '2016-05-01',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles'
-            }]
-        }
-    },
+    name: 'places-list',
+    props: ['places'],
     methods: {
-        handleEdit(index, row) {
-            console.log(index, row);
-        },
-        handleDelete(index, row) {
-            console.log(index, row);
+        handleDelete(idx, row) {
+            this.$emit('deleteMarker', row)
         }
     }
 }
 </script>
+
+<style scoped>
+    .el-table {
+        margin-left: 50px;
+        display: table;
+    }
+</style>
+
 
