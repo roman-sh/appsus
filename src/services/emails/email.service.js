@@ -1,15 +1,22 @@
 let emails = [];
 
 function getEmails() {
-  return generateEmails()
+  return new Promise(resolve => {
+    if (emails.length) {
+      resolve(emails);
+    }
+    else {
+      setTimeout(() => {
+        emails = generateEmails();
+        resolve(emails);
+      }, 500);
+    }
+  });
 }
 
 export default {
   getEmails
 }
-
-
-// Used to create local data with no AJAX
 
 function generateEmails() {
   const subject = [
@@ -24,7 +31,7 @@ function generateEmail(subject, i) {
     id: i + 1,
     from: `Author ${i+1}`,
     subject: `${subject}`,
-    body: `${subject} lorem  ipsum dkhd daklhd dakhdk dakhdk da`,
+    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet iaculis nibh. Cras velit sem, tempor sit amet facilisis vitae, mattis et neque. Suspendisse sit amet est vitae tellus finibus posuere vel ut quam. Duis porta nec enim sed eleifend. Nulla facilisi. Mauris dignissim vitae tortor sit amet pulvinar.`,
     date: 1231231231
   }
 }

@@ -36,7 +36,6 @@
       }
     },
     created() {
-      eventBus.emailWasClicked(this.emails[0]);
       eventBus.$on('deleteEmail', (email) => {
         this.emails.splice(email.id - 1, 1)
       });
@@ -65,7 +64,7 @@
 <style>
 
   .email-list {
-    /*width: 40%;*/
+    width: 53%;
   }
 
   .el-table {

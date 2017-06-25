@@ -22,7 +22,9 @@
       EmailDetails
     },
     created() {
-      this.emails = emailService.getEmails()
+      emailService.getEmails().then(emails => {
+        this.emails = emails
+      })
     },
     data() {
       return {
@@ -37,7 +39,7 @@
   .app {
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 5px;
     border: 1px solid #BFCBD9;

@@ -1,13 +1,8 @@
 <template>
   <div class="emailDetails">
-    <h2>{{ email.from }}</h2>
-    <h2>{{ email.subject }}</h2>
+    <h4>From: {{ email.from }}</h4>
+    <h4>Subbject: {{ email.subject }}</h4>
     <p>{{ email.body }}</p>
-    <el-button
-      size="small"
-      type="danger"
-      @click="deleteEmail">Delete
-    </el-button>
   </div>
 
 </template>
@@ -41,10 +36,13 @@
 
 <style>
   .emailDetails {
-    width: 60%;
+    box-sizing: border-box;
+    width: 45%;
     margin-top: 42px;
+    padding: 10px;
     border: 1px solid #BFCBD9;
     border-radius: 3px;
+    text-align: justify;
   }
 </style>
 
