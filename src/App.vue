@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <main-nav></main-nav>
-    <router-view></router-view>
-  </div>
+    <div id="app">
+      <main-nav></main-nav>
+      <router-view></router-view>
+    </div>
 </template>
 
 <script>
@@ -22,13 +22,24 @@
       EmailApp
     }
   }
+    import BookList from './components/book_store/BookList.vue';
+    import Cart from './components/book_store/Cart.vue';
+    import Index from './components/Index.vue';
+    import MainNav from './components/MainNav.vue';
+    // import MainMaps from './components/places/MainMaps.vue';
+    export default {
+        name: 'app',
+        components: {
+            BookList,
+            Cart,
+            Index,
+            MainNav,
+            // MainMaps
+        }
+    }
 </script>
 
 <style scoped>
-  html, body {
-    padding: 0;
-    margin: 0;
-  }
 
   #app {
 

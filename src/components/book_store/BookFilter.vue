@@ -23,7 +23,7 @@ export default {
 
 <style scoped>
     .book-filter {
-        /*background-color: chocolate;*/
+        background-color: chocolate;
         padding: 10px;
         border-radius: 1em;
     }

@@ -3,7 +3,7 @@ import App from './App';
 import router from './router';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-default/index.css'
-// import MainMaps from 'vue-yandex-maps';
+import MainMaps from 'vue-yandex-maps';
 
 export const eventBus = new Vue({
   methods: {
@@ -17,7 +17,7 @@ export const eventBus = new Vue({
 });
 
 Vue.use(ElementUI);
-// Vue.use(MainMaps);
+Vue.use(MainMaps);
 
 Vue.config.productionTip = false;
 
